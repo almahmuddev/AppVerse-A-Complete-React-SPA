@@ -3,10 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast'
 import { useInstalledApps } from '../hooks/useInstalledApps'
 import PageLoader from '../components/PageLoader'
-import { formatNum } from '../utils/formatNum'
 import apps from '../data/apps'
 
-// Toast style for the uninstall action (uses the red palette)
 const uninstallToastStyle = {
   background: '#1E1535',
   color: '#FCA5A5',
@@ -25,7 +23,7 @@ export default function InstallationPage() {
     return () => clearTimeout(timer)
   }, [])
 
-  // Filter the full apps list to only those the user has installed
+  // Filter the full apps only those the user has installed
   const installedApps = apps.filter((a) => installed.includes(a.id))
 
   function handleUninstall(app) {
@@ -77,7 +75,6 @@ export default function InstallationPage() {
   )
 }
 
-// Separate small component so InstallationPage's JSX stays clean
 function InstalledAppCard({ app, onView, onUninstall }) {
   return (
     <div className="app-card" style={{ cursor: 'default' }}>
@@ -97,7 +94,7 @@ function InstalledAppCard({ app, onView, onUninstall }) {
           <span>★</span>
           <span>{app.ratingAvg}</span>
         </div>
-        <span className="downloads-label">↓ {formatNum(app.downloads)}</span>
+        <span className="downloads-label">↓ {app.downloads}</span>
       </div>
 
       <button className="uninstall-btn" onClick={onUninstall}>

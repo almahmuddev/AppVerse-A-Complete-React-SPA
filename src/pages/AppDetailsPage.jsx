@@ -5,15 +5,15 @@ import { useInstalledApps } from '../hooks/useInstalledApps'
 import PageLoader from '../components/PageLoader'
 import StarRating from '../components/StarRating'
 import RatingChart from '../components/RatingChart'
-import { formatNum } from '../utils/formatNum'
 import apps from '../data/apps'
 
-// Build the four stat boxes for the app header
+// four stat boxes for the app header
+
 function buildStats(app) {
   return [
-    { value: formatNum(app.downloads), label: 'Downloads' },
+    { value: app.downloads, label: 'Downloads' },
     { value: app.ratingAvg, label: 'Avg Rating' },
-    { value: formatNum(app.reviews), label: 'Reviews' },
+    { value: app.reviews, label: 'Reviews' },    
     { value: `${app.size} MB`, label: 'Size' },
   ]
 }
@@ -74,7 +74,7 @@ export default function AppDetailsPage() {
         ← Back to Apps
       </button>
 
-      {/* ── APP HEADER ── */}
+      {/* app header */}
       <div className="details-header">
         <div className="details-app-img">
           <span style={{ fontSize: '3rem' }}>{app.image}</span>
@@ -110,7 +110,7 @@ export default function AppDetailsPage() {
         </div>
       </div>
 
-      {/* ── BODY: Description + Ratings ── */}
+      {/* description + Ratings */}
       <div className="details-body">
         {/* Left: Description */}
         <div className="detail-card">
@@ -118,7 +118,7 @@ export default function AppDetailsPage() {
           <p className="app-description">{app.description}</p>
         </div>
 
-        {/* Right: Rating breakdown + Chart */}
+        {/* Rating breakdown */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           <div className="detail-card">
             <h3>Ratings & Reviews</h3>
@@ -127,11 +127,11 @@ export default function AppDetailsPage() {
               <div className="rating-big">{app.ratingAvg}</div>
               <div className="rating-overview-right">
                 <StarRating avg={app.ratingAvg} size="1.1rem" />
-                <div className="total-reviews">{formatNum(totalReviews)} total reviews</div>
+                <div className="total-reviews">{totalReviews} total reviews</div>
               </div>
             </div>
 
-            {/* Rating bars — shown from 5 stars down to 1 star */}
+            {/* Rating bars */}
             <div className="rating-bars">
               {[...app.ratings].reverse().map((r) => (
                 <div key={r.name} className="rating-row">
@@ -146,7 +146,7 @@ export default function AppDetailsPage() {
                       }}
                     />
                   </div>
-                  <span className="count-label">{formatNum(r.count)}</span>
+                  <span className="count-label">{r.count}</span>
                 </div>
               ))}
             </div>

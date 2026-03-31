@@ -1,9 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { formatNum } from '../utils/formatNum'
 
 // A single app card shown in grids across the app.
-// Clicking navigates to the app detail page.
 export default function AppCard({ app, installed = false }) {
   const navigate = useNavigate()
 
@@ -23,7 +21,7 @@ export default function AppCard({ app, installed = false }) {
           <span>★</span>
           <span>{app.ratingAvg}</span>
         </div>
-        <span className="downloads-label">↓ {formatNum(app.downloads)}</span>
+        <span className="downloads-label">↓ {app.downloads}</span>
       </div>
     </div>
   )
