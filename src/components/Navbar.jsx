@@ -34,7 +34,7 @@ export default function Navbar() {
 
         <div className="nav-right">
           <a
-            href="https://github.com"
+            href="https://github.com/almahmuddev"
             target="_blank"
             rel="noreferrer"
             className="nav-contribute-btn"
