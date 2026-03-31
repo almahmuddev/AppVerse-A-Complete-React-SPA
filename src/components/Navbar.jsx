@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 
-// Returns the CSS class for a nav link, adding "active" when the route matches
 function navLinkClass({ isActive }) {
   return 'nav-link' + (isActive ? ' active' : '')
 }

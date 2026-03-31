@@ -1,6 +1,6 @@
 import React from 'react'
 
-// Renders a row of filled, half, and empty stars based on an average rating
+//  a row of filled, half, and empty stars based on an average rating
 export default function StarRating({ avg, size = '1rem' }) {
   const fullCount = Math.floor(avg)
   const hasHalf = avg - fullCount >= 0.5

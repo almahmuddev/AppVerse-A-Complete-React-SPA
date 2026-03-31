@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react'
 
 const LS_KEY = 'appverse_installed_v1'
 
-// Read the installed app IDs from localStorage on first render
+// Read the installed app IDs from localStorage 
 function readFromStorage() {
   try {
     const raw = localStorage.getItem(LS_KEY)

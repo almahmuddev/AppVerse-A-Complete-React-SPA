@@ -9,10 +9,8 @@ import {
   Cell,
 } from 'recharts'
 
-// Colors for each bar, cycling if there are more than 5 ratings
 const BAR_COLORS = ['#7C3AED', '#8B5CF6', '#A78BFA', '#F59E0B', '#F97316']
 
-// Tooltip and axis style config pulled out so JSX stays readable
 const tooltipContentStyle = {
   background: '#1E1535',
   border: '1px solid rgba(124,58,237,0.4)',
@@ -27,7 +25,6 @@ function formatAxisTick(n) {
 }
 
 export default function RatingChart({ ratings }) {
-  // Recharts needs a plain array of objects
   const data = ratings.map((r) => ({ name: r.name, count: r.count }))
 
   return (

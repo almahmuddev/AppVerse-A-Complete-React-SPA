@@ -6,7 +6,6 @@ import apps from '../data/apps'
 
 const DEBOUNCE_MS = 350
 
-// Sort the app list based on the selected sort option
 function getSortedApps(list, sortOption) {
   if (sortOption === 'high-low') {
     return [...list].sort((a, b) => b.downloads - a.downloads)
@@ -20,19 +19,16 @@ function getSortedApps(list, sortOption) {
 export default function AppsPage() {
   const [query, setQuery] = useState('')
   const [sort, setSort] = useState('default')
-  // debouncedQuery is what we actually filter against
   const [debouncedQuery, setDebouncedQuery] = useState('')
   const [initialLoad, setInitialLoad] = useState(true)
   const { isInstalled } = useInstalledApps()
   const debounceRef = useRef(null)
 
-  // Short initial load delay for the page transition spinner
   useEffect(() => {
     const timer = setTimeout(() => setInitialLoad(false), 500)
     return () => clearTimeout(timer)
   }, [])
 
-  // Debounce the search query so we don't filter on every keystroke
   useEffect(() => {
     clearTimeout(debounceRef.current)
     debounceRef.current = setTimeout(() => {
@@ -58,7 +54,7 @@ export default function AppsPage() {
         <p>Explore {apps.length} top-tier apps developed by us — find yours today.</p>
       </div>
 
-      {/* ── SEARCH & SORT CONTROLS ── */}
+      {/*  search & sort controls  */}
       <div className="apps-controls">
         <p className="apps-found">
           <strong>{displayedApps.length}</strong> Apps Found
@@ -87,7 +83,7 @@ export default function AppsPage() {
         </div>
       </div>
 
-      {/* ── APP GRID OR EMPTY STATE ── */}
+      {/* app grid or empty state */}
       {displayedApps.length === 0 ? (
         <div className="empty-state">
           <span className="empty-icon">🔍</span>

@@ -1,6 +1,4 @@
-/* ========================
-   GLOBAL RESET & VARIABLES
-   ======================== */
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -77,9 +75,7 @@ img {
   max-width: 100%;
 }
 
-/* ============
-   LAYOUT
-   ============ */
+/* layout */
 .app-wrapper {
   min-height: 100vh;
   display: flex;
@@ -97,9 +93,7 @@ img {
   width: 100%;
 }
 
-/* ============
-   NAVBAR
-   ============ */
+/* navbar */
 .navbar {
   background: rgba(15, 10, 30, 0.92);
   backdrop-filter: blur(24px);
@@ -228,9 +222,7 @@ img {
   transition: all 0.3s;
 }
 
-/* ============
-   FOOTER
-   ============ */
+/* footer design */
 .footer {
   background: var(--bg2);
   border-top: 1px solid var(--border);
@@ -316,9 +308,7 @@ img {
   gap: 0.5rem;
 }
 
-/* ============
-   PAGE LOADER
-   ============ */
+/* page loader design */
 .page-loader {
   display: flex;
   align-items: center;
@@ -356,9 +346,7 @@ img {
   font-size: 0.9rem;
 }
 
-/* ============
-   BUTTONS
-   ============ */
+/* buttons design */
 .btn-primary {
   padding: 12px 28px;
   background: linear-gradient(135deg, var(--purple), var(--purple-dark));
@@ -415,9 +403,7 @@ img {
   background: rgba(124, 58, 237, 0.25);
 }
 
-/* ============
-   SECTION
-   ============ */
+/* sections  */
 .section {
   padding: 3rem 0;
 }
@@ -431,7 +417,6 @@ img {
   flex-wrap: wrap;
 }
 
-.section-title-wrap {}
 
 .section-title {
   font-size: 1.6rem;
@@ -445,9 +430,7 @@ img {
   margin-top: 5px;
 }
 
-/* ============
-   APP CARDS GRID
-   ============ */
+/* app cards */
 .apps-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -548,9 +531,7 @@ img {
   letter-spacing: 0.03em;
 }
 
-/* ============
-   HERO (HOME)
-   ============ */
+/* banner home part */
 .home-hero {
   text-align: center;
   padding: 5rem 1rem 3.5rem;
@@ -619,9 +600,7 @@ img {
   flex-wrap: wrap;
 }
 
-/* ============
-   STATS
-   ============ */
+/* stats part design */
 .stats-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -669,9 +648,7 @@ img {
   color: var(--text2);
 }
 
-/* ============
-   PAGE HERO (APPS / INSTALLATION)
-   ============ */
+/* apps installation part */
 .page-hero {
   padding: 3rem 0 2rem;
   border-bottom: 1px solid var(--border);
@@ -688,9 +665,7 @@ img {
   color: var(--text2);
 }
 
-/* ============
-   APPS PAGE CONTROLS
-   ============ */
+/* apps controls */
 .apps-controls {
   display: flex;
   align-items: center;
@@ -768,9 +743,7 @@ img {
   border-color: var(--purple);
 }
 
-/* ============
-   NO RESULTS
-   ============ */
+/* empty result */
 .empty-state {
   text-align: center;
   padding: 5rem 1rem;
@@ -790,9 +763,7 @@ img {
   color: var(--text);
 }
 
-/* ============
-   APP DETAILS
-   ============ */
+/* app details part design */
 .back-btn {
   display: inline-flex;
   align-items: center;
@@ -959,9 +930,7 @@ img {
   line-height: 1.85;
 }
 
-/* ============
-   RATING BARS
-   ============ */
+/* rating bars */
 .rating-overview {
   display: flex;
   align-items: center;
@@ -1045,16 +1014,12 @@ img {
   font-size: 0.75rem;
 }
 
-/* ============
-   CHART
-   ============ */
+
 .chart-wrap {
   margin-top: 1.5rem;
 }
 
-/* ============
-   NOT FOUND IN DETAILS
-   ============ */
+/* not found */
 .app-not-found {
   text-align: center;
   padding: 5rem 1rem;
@@ -1067,9 +1032,7 @@ img {
   margin: 0 auto 1.25rem;
 }
 
-/* ============
-   404 PAGE
-   ============ */
+/* 404 page design */
 .error-404-page {
   text-align: center;
   padding: 6rem 1.5rem;
@@ -1099,9 +1062,7 @@ img {
   font-size: 1.05rem;
 }
 
-/* ============
-   INSTALLATION PAGE
-   ============ */
+/* installation page design */
 .uninstall-btn {
   margin-top: 10px;
   width: 100%;
@@ -1120,9 +1081,7 @@ img {
   background: rgba(239,68,68,0.22);
 }
 
-/* ============
-   RESPONSIVE
-   ============ */
+/* responsiveness  */
 @media (max-width: 1024px) {
   .apps-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-top { grid-template-columns: 1fr 1fr 1fr; }

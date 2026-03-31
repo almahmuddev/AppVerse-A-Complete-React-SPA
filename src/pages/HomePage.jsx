@@ -5,11 +5,11 @@ import PageLoader from '../components/PageLoader'
 import { useInstalledApps } from '../hooks/useInstalledApps'
 import apps from '../data/apps'
 
-// Show only the first 8 apps in the "Trending" section
+// show only the first 8 apps in the "Trending" section
 const TRENDING_COUNT = 8
 const trendingApps = apps.slice(0, TRENDING_COUNT)
 
-// Stats shown below the hero banner
+// stats shown below the hero banner
 const STATS = [
   { icon: '📱', value: '29.6M', label: 'Total Downloads' },
   { icon: '⭐', value: '906K', label: 'Active Reviews' },
@@ -21,7 +21,7 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true)
   const { isInstalled } = useInstalledApps()
 
-  // Simulate a short loading delay for the transition animation
+//  short  animation for betterness lookings
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 500)
     return () => clearTimeout(timer)
@@ -31,7 +31,7 @@ export default function HomePage() {
 
   return (
     <div>
-      {/* ── HERO ── */}
+      {/* hero part */}
       <div className="home-hero">
         <div className="hero-badge">🚀 Discover Amazing Apps</div>
         <h1 className="hero-title">
@@ -60,7 +60,7 @@ export default function HomePage() {
       </div>
 
       <div className="container">
-        {/* ── STATS ── */}
+        {/* stats part */}
         <div className="stats-row">
           {STATS.map((s) => (
             <div key={s.label} className="stat-card">
@@ -71,7 +71,7 @@ export default function HomePage() {
           ))}
         </div>
 
-        {/* ── TRENDING APPS ── */}
+        {/*  trending apps */}
         <div className="section">
           <div className="section-header">
             <div className="section-title-wrap">

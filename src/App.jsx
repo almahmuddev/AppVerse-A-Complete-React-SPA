@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import PageLoader from './components/PageLoader'
 
-// Lazy-load pages so each route only loads its code when visited
+// lazy-load pages 
 const HomePage = React.lazy(() => import('./pages/HomePage'))
 const AppsPage = React.lazy(() => import('./pages/AppsPage'))
 const AppDetailsPage = React.lazy(() => import('./pages/AppDetailsPage'))
